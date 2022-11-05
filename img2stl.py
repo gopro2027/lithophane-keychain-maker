@@ -14,7 +14,7 @@ base = 0.4 #base thickness in mm    0.3 was the smallest that game good results 
 # www.slazzer.com does not have the shadow under it but is the same as removebg
 
 base_dir = "raw_images/"
-imginput = 'chase.jpg'
+imginput = 'bluec5above.jpg'
 #imginput = 'drewbike-removebg.png'
 
 
@@ -35,8 +35,8 @@ import addkeyring as ak
 #    return remove(image)  #rembg pip
 
 def getAPIKey():
-    #return "d6knPFpT5fuPBHrGC1vkAr8N" #gopro2027@gmail.com
-    return "rKepGHaJ1iDX5yyQr1sqmCCD" #mreinbott13@gmail.com
+    return "d6knPFpT5fuPBHrGC1vkAr8N" #gopro2027@gmail.com
+    #return "rKepGHaJ1iDX5yyQr1sqmCCD" #mreinbott13@gmail.com
 
 # https://github.com/remove-bg/remove-bg-cli/releases/
 # If there is an error about bootstrap.js, delete this folder:
@@ -46,7 +46,9 @@ def remove_bg(image_filepath):
     outputimg = "output/"+Path(image_filepath).stem+".png"
 
     #only call api if image has not been created
+    #consider updating to pip install rembg https://github.com/danielgatis/rembg
     if not os.path.exists(imagenobg):
+        # https://github.com/remove-bg/remove-bg-cli
         cmd = "removebg --api-key "+getAPIKey()+" "+image_filepath+" --format png --size preview --type car --output-directory output/rembg"
         os.system(cmd)
 
