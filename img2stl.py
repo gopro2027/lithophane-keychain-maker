@@ -35,8 +35,7 @@ import addkeyring as ak
 #    return remove(image)  #rembg pip
 
 def getAPIKey():
-    return "d6knPFpT5fuPBHrGC1vkAr8N" #gopro2027@gmail.com
-    #return "rKepGHaJ1iDX5yyQr1sqmCCD" #mreinbott13@gmail.com
+    return "XXXXXXXXXXXXXXXXXXXXXXXX" # PUT YOUR API KEY FROM REMOVE.BG HERE
 
 # https://github.com/remove-bg/remove-bg-cli/releases/
 # If there is an error about bootstrap.js, delete this folder:
